@@ -11,7 +11,8 @@
     <RelativeLayout
         android:id="@+id/recyclerviewid"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#673AB7">
 
 
         <ImageView
@@ -32,13 +33,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
+            android:layout_below="@id/imageView"
             android:layout_marginStart="4dp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="4dp"
             android:layout_marginBottom="4dp"
             android:padding="4dp"
             android:text="Anime Name"
-            android:layout_below="@id/imageView"
             android:textColor="@color/white"
             android:textSize="18sp" />
 
@@ -100,7 +101,6 @@
             android:text="Notes from the friend"
             android:textColor="@color/white"
             android:textSize="18sp" />
-
 
 
     </RelativeLayout>

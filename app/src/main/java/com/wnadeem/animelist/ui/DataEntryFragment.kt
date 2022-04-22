@@ -54,7 +54,7 @@ class DataEntryFragment : Fragment(){
             submitbtn.setOnClickListener {
 
                 var anime = Anime()
-                anime.animePicTitle = animePic.text.toString()
+                //anime.animePicTitle = animePic.text.toString()
                 anime.animeNameTitle = firstnameid.text.toString()
                 anime.friendNameTitle = lastnameid.text.toString()
                 anime.categoryTitle = nicknameid.text.toString()

@@ -9,22 +9,6 @@
         tools:context=".DataEntryFragment">
 
         <EditText
-            android:id="@+id/animePic"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
-            android:autofillHints=""
-            android:inputType="text"
-            android:text="Anime Picture Url"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.068" />
-
-        <EditText
             android:id="@+id/firstnameid"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -32,13 +16,13 @@
             android:layout_marginEnd="32dp"
             android:autofillHints=""
             android:inputType="text"
-            android:text="First Name"
+            android:text="Anime Name"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.18" />
+            app:layout_constraintVertical_bias="0.094" />
 
         <EditText
             android:id="@+id/lastnameid"
@@ -46,69 +30,76 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="100dp"
             android:layout_marginEnd="32dp"
             android:autofillHints=""
             android:inputType="text"
-            android:text="Last Name"
-            app:layout_constraintBottom_toTopOf="@+id/submitbtn"
+            android:text="Recommender Name"
+            app:layout_constraintBottom_toTopOf="@id/submitbtn"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.215" />
+            app:layout_constraintTop_toBottomOf="@id/firstnameid"
+            app:layout_constraintVertical_bias="0.133" />
 
         <EditText
             android:id="@+id/nicknameid"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
             android:layout_marginEnd="32dp"
+            android:layout_marginBottom="32dp"
             android:autofillHints=""
             android:inputType="text"
-            android:text="Nickname"
-            app:layout_constraintBottom_toTopOf="@+id/submitbtn"
+            android:text="Category"
+            app:layout_constraintBottom_toTopOf="@+id/commentid"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.615" />
+            app:layout_constraintTop_toBottomOf="@+id/lastnameid"
+            app:layout_constraintVertical_bias="0.0" />
 
         <EditText
             android:id="@+id/commentid"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
             android:autofillHints=""
             android:inputType="text"
-            android:text="Comment"
+            android:text="Score"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
+
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.451" />
 
         <EditText
             android:id="@+id/notesid"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
             android:autofillHints=""
             android:inputType="text"
-            android:text="Comment"
+            android:text="Notes"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.537" />
 
         <Button
             android:id="@+id/submitbtn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="280dp"
+            android:layout_marginTop="316dp"
             android:text="@string/Submit"
             app:layout_constraintEnd_toEndOf="@+id/firstnameid"
             app:layout_constraintHorizontal_bias="0.0"
