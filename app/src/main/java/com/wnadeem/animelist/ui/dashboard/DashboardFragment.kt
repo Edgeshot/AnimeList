@@ -5,6 +5,8 @@ import android.view.*
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.wnadeem.animelist.BuildConfig
+import com.wnadeem.animelist.R
 import com.wnadeem.animelist.databinding.FragmentDashboardBinding
 
 class DashboardFragment : Fragment() {
@@ -27,12 +29,28 @@ class DashboardFragment : Fragment() {
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textDashboard
-        dashboardViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
+//        val textView: TextView = binding.appname
+//        dashboardViewModel.text.observe(viewLifecycleOwner) {
+//            textView.text = it
+//        }
         return root
     }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.apply {
+
+//            buildTimeTextView.text = BuildConfig.BUILD_TIME
+
+            appname.text = resources.getString(R.string.app_name)
+            appversion.text = BuildConfig.VERSION_NAME
+            copyright.text = resources.getString(R.string.copyright)
+
+//            if (BuildConfig.DEBUG) {
+//                debugBuildTextView.visibility = View.VISIBLE
+//            }
+        }
+    }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

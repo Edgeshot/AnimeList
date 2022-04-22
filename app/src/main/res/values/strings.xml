@@ -14,5 +14,8 @@
     <string name="alert">Delete Alert</string>
     <string name="yes">yes</string>
     <string name="no">no</string>
+    <string name="back">Back</string>
+    <string name="copyright">Made by Waleed Nadeem</string>
+
 
 </resources>

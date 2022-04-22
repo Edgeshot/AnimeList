@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="show_message_at_start"
+        android:title="hi" />
+
+    <SwitchPreferenceCompat
+        android:id="@+id/show_now_image_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:key="show_now_image"
+        app:title="bye" />
+
+    <ListPreference
+        android:key="effect_selection"
+        android:summary="%s"
+        android:title="test" />
+
+</PreferenceScreen>
