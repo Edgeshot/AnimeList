@@ -5,6 +5,7 @@ plugins {
     id 'kotlin-kapt'
 }
 
+
 android {
     compileSdk 32
 
@@ -17,6 +18,7 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
 
     buildTypes {
         release {
@@ -57,4 +59,10 @@ dependencies {
 
     // Picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
+
+
+    implementation 'jp.wasabeef.transformers:coil:1.0.6'
+    // Use the GPU Filters
+    implementation 'jp.wasabeef.transformers:coil-gpu:1.0.6'
+
 }
