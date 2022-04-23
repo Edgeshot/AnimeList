@@ -22,7 +22,7 @@ import com.wnadeem.animelist.R
 private const val TAG = "AddItemDialog"
 
 class DataEntryFragment : Fragment(){
-
+    var num = 0
     private val sharedViewModel: MainViewModel by activityViewModels()
     private var _binding: FragmentDataEntryBinding? = null
     private val binding get() = _binding!!
@@ -52,6 +52,7 @@ class DataEntryFragment : Fragment(){
 
 
             submitbtn.setOnClickListener {
+                num = (0..10).shuffled().first()
 
                 var anime = Anime()
                 //anime.animePicTitle = animePic.text.toString()

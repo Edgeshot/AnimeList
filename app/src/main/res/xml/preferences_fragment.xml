@@ -5,6 +5,7 @@
     <CheckBoxPreference
         android:defaultValue="true"
         android:key="show_message_at_start"
+        android:theme="@style/Theme.AnimeList"
         android:title="Intro Dialog" />
 
     <CheckBoxPreference
@@ -19,12 +20,5 @@
         android:defaultValue="true"
         android:key="check_box_preference_2"
         android:title="Dev log" />
-    <SwitchPreferenceCompat
-        android:id="@+id/image_show"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="invisible"
-        app:key="show_now_image"
-        app:title="show title image" />
 
 </PreferenceScreen>

@@ -9,6 +9,8 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.preference.PreferenceManager
+import com.wnadeem.animelist.BuildConfig
+import com.wnadeem.animelist.R
 import com.wnadeem.animelist.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -38,7 +40,23 @@ class HomeFragment : Fragment() {
 //        homeViewModel.text.observe(viewLifecycleOwner) {
 //            textView.text = it
 
+
+
         return root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.apply {
+
+//            buildTimeTextView.text = BuildConfig.BUILD_TIME
+
+webview.loadUrl("https://www.cbr.com/anime-book-lover-recommendations/")
+
+//            if (BuildConfig.DEBUG) {
+//                debugBuildTextView.visibility = View.VISIBLE
+//            }
+        }
     }
 
 

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AnimeListe</string>
+    <string name="title_home">Domicile</string>
+    <string name="title_dashboard">Info</string>
+    <string name="title_notifications">Animé</string>
+    <string name="settings">Réglages</string>
+
+    <string name="Submit">Soumettre</string>
+    <string name="AlertDialog">ous avez ajouté: </string>
+    <string name="newfriend">nouvel ami </string>
+    <string name="ok">daccord </string>
+    <string name="Cancel">Annuler</string>
+    <string name="deletion_alert">Supprimer lalerte</string>
+    <string name="alert">Supprimer lalerte</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+    <string name="back">Arrière</string>
+    <string name="copyright">Faite par Waleed Nadeem</string>
+    <string name="welcome">Bienvenue sur la liste des animes app</string>
+    <string name="purpose">AnimeList vous aide à vous souvenir des Anime que vos amis ont suggérés afin que vous puissiez les regarder plus tard</string>
+    <string name="Tip">pourboire de</string>
+    <string name="TipText">Chaque fois quun ami recommande, ajoutez à votre AnimeList ! Pika Pika</string>
+    <string name="Devlog">Journal de développement</string>
+    <string name="Devlogtext">Cest la construction initiale!</string>
+
+</resources>
