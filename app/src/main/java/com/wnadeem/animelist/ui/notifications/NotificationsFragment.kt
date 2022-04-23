@@ -100,4 +100,6 @@ class NotificationsFragment : Fragment() {
         super.onCreateOptionsMenu(menu, inflater)
         menu.clear()
     }
+
+
 }

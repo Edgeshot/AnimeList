@@ -16,6 +16,11 @@
     <string name="no">no</string>
     <string name="back">Back</string>
     <string name="copyright">Made by Waleed Nadeem</string>
-
+    <string name="welcome">Welcome to AnimeList app</string>
+    <string name="purpose">AnimeList helps you remember what Anime your friends suggested so you can watch them later</string>
+    <string name="Tip">tip from Pikachu</string>
+    <string name="TipText">Everytime a friend recommends, add to your AnimeList! Pika Pika</string>
+    <string name="Devlog">Devlog</string>
+    <string name="Devlogtext">This is the initial build!</string>
 
 </resources>

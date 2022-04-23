@@ -1,5 +1,7 @@
 package com.wnadeem.animelist
 
+import android.app.AlertDialog
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -12,11 +14,19 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import androidx.preference.PreferenceManager
 import com.wnadeem.animelist.R
+import com.wnadeem.animelist.AnimeList.Companion.SHOW_MESSAGE_AT_START
+import com.wnadeem.animelist.AnimeList.Companion.SHOW_MESSAGE_AT_START1
+import com.wnadeem.animelist.AnimeList.Companion.SHOW_MESSAGE_AT_START2
 
 
 class MainActivity2 : AppCompatActivity() {
     private lateinit var navHostFragment: NavHostFragment
+
+    private val prefs: SharedPreferences by lazy {
+        PreferenceManager.getDefaultSharedPreferences(this)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -25,6 +35,22 @@ class MainActivity2 : AppCompatActivity() {
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
         navHostFragment = supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
         NavigationUI.setupActionBarWithNavController(this, navHostFragment.navController)
+
+        if (savedInstanceState == null) {
+            if (prefs.getBoolean(SHOW_MESSAGE_AT_START2, false)) {
+                welcomeAlert3()
+
+            }
+            if (prefs.getBoolean(SHOW_MESSAGE_AT_START1, false)) {
+
+                welcomeAlert2()
+            }
+            if (prefs.getBoolean(SHOW_MESSAGE_AT_START, false)) {
+
+                welcomeAlert()
+            }
+        }
+
 
         val navController = findNavController(R.id.navHostFragment)
         // Passing each menu ID as a set of Ids because each
@@ -59,13 +85,39 @@ class MainActivity2 : AppCompatActivity() {
         }
     }
 
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        return when (item.itemId) {
-//            R.id.navigation_notifications-> {
-//                navHostFragment.navController.navigate(R.id.action_navigation_home_to_settingsFragment)
-//                true
-//            }
-//            else -> super.onOptionsItemSelected(item)
-//        }
-//    }
+    private fun welcomeAlert() {
+        val msg = resources.getString(R.string.welcome)
+        val builder = AlertDialog.Builder(this)
+        with(builder) {
+            setTitle(R.string.welcome)
+            setMessage(R.string.purpose)
+            setIcon(R.drawable.pikachuicon)
+            setPositiveButton(R.string.ok, null)
+            show()
+        }
+    }
+
+    private fun welcomeAlert2() {
+        val msg = resources.getString(R.string.welcome)
+        val builder = AlertDialog.Builder(this)
+        with(builder) {
+            setTitle(R.string.Tip)
+            setMessage(R.string.TipText)
+            setIcon(R.drawable.ic_baseline_highlight_24)
+            setPositiveButton(R.string.ok, null)
+            show()
+        }
+    }
+
+    private fun welcomeAlert3() {
+        val msg = resources.getString(R.string.welcome)
+        val builder = AlertDialog.Builder(this)
+        with(builder) {
+            setTitle(R.string.Devlog)
+            setMessage(R.string.Devlogtext)
+            setIcon(R.drawable.ic_baseline_handyman_24)
+            setPositiveButton(R.string.ok, null)
+            show()
+        }
+    }
 }

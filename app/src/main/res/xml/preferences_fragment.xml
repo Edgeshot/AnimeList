@@ -5,18 +5,26 @@
     <CheckBoxPreference
         android:defaultValue="true"
         android:key="show_message_at_start"
-        android:title="hi" />
+        android:title="Intro Dialog" />
 
-    <SwitchPreferenceCompat
-        android:id="@+id/show_now_image_switch"
+    <CheckBoxPreference
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:defaultValue="true"
+        android:key="check_box_preference_1"
+        android:title="Tips" />
+    <CheckBoxPreference
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:defaultValue="true"
+        android:key="check_box_preference_2"
+        android:title="Dev log" />
+    <SwitchPreferenceCompat
+        android:id="@+id/image_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
         app:key="show_now_image"
-        app:title="bye" />
-
-    <ListPreference
-        android:key="effect_selection"
-        android:summary="%s"
-        android:title="test" />
+        app:title="show title image" />
 
 </PreferenceScreen>
